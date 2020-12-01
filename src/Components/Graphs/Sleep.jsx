@@ -45,7 +45,7 @@ export default function Sleep() {
                 },
                 scales: {
                   xAxes: [{
-                      ticks: { display: true},
+                      ticks: { display: true, fontSize:8},
                       gridLines: {
                           display: false,
                           drawBorder: false

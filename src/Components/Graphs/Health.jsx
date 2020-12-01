@@ -43,6 +43,7 @@ export default function Health() {
                   xAxes: [{
                     ticks: { 
                       display: true,
+                      fontSize:10
                     },
                       gridLines: {
                           display: true,

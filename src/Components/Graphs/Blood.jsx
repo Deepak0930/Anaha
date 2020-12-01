@@ -37,7 +37,7 @@ export default function Blood() {
                 responsive: true,
                 scales: {
                     xAxes: [{
-                        ticks: { display: true },
+                        ticks: { display: true, fontSize:8},
                         gridLines: {
                             display: false,
                             drawBorder: false

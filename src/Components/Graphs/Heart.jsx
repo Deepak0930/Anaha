@@ -41,7 +41,7 @@ export default function Heart() {
                 },
                 scales: {
                   xAxes: [{
-                      ticks: { display: true},
+                      ticks: { display: true, fontSize:8},
                       gridLines: {
                           display: false,
                           drawBorder: false
