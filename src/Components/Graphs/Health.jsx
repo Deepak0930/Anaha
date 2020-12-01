@@ -52,9 +52,20 @@ export default function Health() {
                   yAxes: [{
                     ticks: { 
                       display: true,
+                      fontSize:10,
                       min: 0,
                       max: 100,
-                      stepSize: 50
+                      stepSize: 50,
+                      callback: function(label){
+                        switch(label){
+                            case 0:
+                                return '0%';
+                            case 50:
+                                return '50%'
+                            case 100:
+                                return "100%"
+                        }
+                    }
                     },
                       gridLines: {
                           display: true,

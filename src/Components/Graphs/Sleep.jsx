@@ -54,9 +54,20 @@ export default function Sleep() {
                   yAxes: [{
                     ticks: { 
                       display: true,
+                      fontSize: 9,
                       min: 50,
                       max: 150,
-                      stepSize:50
+                      stepSize:50,
+                      callback: function(label){
+                        switch(label){
+                            case 50:
+                                return 'Deep'
+                            case 100:
+                                return 'Light'
+                            case 150:
+                                return "Awake"
+                        }
+                    }
                     },
                       gridLines: {
                           display: false,

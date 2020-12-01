@@ -46,9 +46,20 @@ export default function Blood() {
                     yAxes: [{
                         ticks: { 
                             display: true,
+                            fontSize:8,
                             min: 50,
                             max: 150,
-                            stepSize:50
+                            stepSize:50,
+                            callback: function(label){
+                                switch(label){
+                                    case 50:
+                                        return '50mmHg'
+                                    case 100:
+                                        return '100mmHg'
+                                    case 150:
+                                        return "150mmHg"
+                                }
+                            }
                           },
                         gridLines: {
                             display: false,

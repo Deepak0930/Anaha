@@ -50,9 +50,20 @@ export default function Heart() {
                   yAxes: [{
                       ticks: { 
                         display: true,
+                        fontSize:8,
                         min: 50,
                         max:150,
-                        stepSize:50
+                        stepSize:50,
+                        callback: function(label){
+                          switch(label){
+                              case 50:
+                                  return '50bpm'
+                              case 100:
+                                  return '100bpm'
+                              case 150:
+                                  return "150bpm"
+                          }
+                      }
                       },
                       gridLines: {
                           display: false,

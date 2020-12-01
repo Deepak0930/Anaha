@@ -50,14 +50,26 @@ export default function Activity() {
                         ticks: { 
                             display: true, 
                             beginAtZero: true, 
+                            fontSize:10,
                             max: 100,
                             min: 0,
-                            stepSize: 50
+                            stepSize: 50,
+                            callback: function(label){
+                                switch(label){
+                                    case 0:
+                                        return '0%';
+                                    case 50:
+                                        return '50%'
+                                    case 100:
+                                        return "100%"
+                                }
+                            }
                         },
                         gridLines: {
                             display: false,
                             drawBorder: false
                         }
+
                     }]
                 }
               }}

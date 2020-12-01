@@ -57,7 +57,8 @@ export default function Body() {
                       display: true,
                       min: 30,
                       max: 40,
-                      stepSize:5
+                      fontSize: 8,
+                      stepSize:5,
                     },
                       gridLines: {
                           display: false,
