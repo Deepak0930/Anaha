@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Bar, Line, Pie } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 export default function Activity() {
     const [data, setData] =  useState({})
@@ -29,12 +29,9 @@ export default function Activity() {
             options={{
                 title:{
                     display:false,
-                    text:'Largest Cities In India',
-                    fontSize:25
                 },
                 legend:{
                     display:false,
-                    position:"right"
                 },
                 responsive: true,
                 maintainAspectRatio: false,

@@ -12,18 +12,18 @@ export default function Restaurents() {
     const [restaurants, setRestaurants] = useState([])
 
     const handleSubmit = async(e) =>{
-        setLoading(true)
         e.preventDefault()
         setSubmit(true)
         fetchData()
-        setLoading(false)
     }
 
     const fetchData = async() =>{
+        setLoading(true)
         let url = BASEURL + SEARCH + `?start=${start}&count=${count}`
         let response = await new APIServices().get(url)
         setRestaurants(response.results)
         setUpdateState(true)
+        setLoading(false)
     }
 
     useEffect(()=>{
@@ -61,10 +61,10 @@ export default function Restaurents() {
             (!loading ? 
                 restaurants.restaurants?.length > 0 ?
                 <>
-                <div>
-                    <p>Start : {restaurants.results_start}</p>
-                    <p>Count : {restaurants.results_shown}</p>
-                </div>
+                    <div>
+                        <p>Start : {restaurants.results_start}</p>
+                        <p>Count : {restaurants.results_shown}</p>
+                    </div>
                     <TableContainer>
                         <Table>
                             <TableHead>
@@ -95,10 +95,11 @@ export default function Restaurents() {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                </>
-                : "No Data Found"
+                </> : "No Data Found"
                 :
-                    "Loading..."
+                <div style={{display:"flex", justifyContent:"center", alignItems:"center",height:"50vh"}}>
+                    <p style={{fontSize:"x-large"}}>Loading...</p>
+                </div>
             )}
         </div>
     )

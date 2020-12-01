@@ -10,7 +10,7 @@ export default function Blood() {
             datasets:[
               {
                 data:[
-                    80, 65, 132, 92, 147, 70
+                    80, 65, 132, 92, 147, 70, 149
                 ],
                 backgroundColor:'orangered',
                 barThickness: 3,
@@ -29,7 +29,6 @@ export default function Blood() {
             options={{
                 title:{
                     display:false,
-                    text:'Largest Cities In India',
                 },
                 legend:{
                     display:false,
