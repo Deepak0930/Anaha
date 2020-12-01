@@ -296,3 +296,44 @@ p{
   opacity: 0.7;
   font-size: x-small;
 }
+
+.formInput{
+    display: block;
+    width: 30%;
+    height: 34px;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #455066;
+    border-radius: 9px;
+    background-color: #f2f3f7;
+    background-clip: padding-box;
+    border: 1px solid #e2e5ec !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.formCenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button{
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  background: #454d67 !important;
+  border: none !important;
+  padding: 9px 20px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.48;
+  color: #bcc2d6;
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+
+.button:focus{
+  outline: none;
+}

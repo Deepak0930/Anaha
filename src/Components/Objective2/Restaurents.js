@@ -35,9 +35,10 @@ export default function Restaurents() {
     return (
         <div style={{display: "block"}}>
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="formCenter">
                 <p>Start</p>
-                <input 
+                <input
+                    className="formInput"
                     type='number'
                     value={start}
                     onChange={(e)=>setStart(e.target.value)}
@@ -45,6 +46,7 @@ export default function Restaurents() {
                 />
                 <p>Count</p>
                 <input 
+                    className="formInput"
                     type='number'
                     value={count}
                     onChange={(e)=>setCount(e.target.value)}
@@ -52,11 +54,11 @@ export default function Restaurents() {
                 />
                 <br />
                 <br />
-                <button type="submit">Search</button>
+                <button type="submit" className="button">Search</button>
             </form>
         </div>
         <br />
-        <div>Restaurants Search API</div>
+        <div style={{textAlign:"center"}}>Restaurants Search API</div>
         {submit &&
             (!loading ? 
                 restaurants.restaurants?.length > 0 ?
@@ -95,7 +97,10 @@ export default function Restaurents() {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                </> : "No Data Found"
+                </> :
+                <div style={{display:"flex", justifyContent:"center", alignItems:"center",height:"50vh"}}>
+                    <p style={{fontSize:"x-large"}}>No Data Found</p>
+                </div>
                 :
                 <div style={{display:"flex", justifyContent:"center", alignItems:"center",height:"50vh"}}>
                     <p style={{fontSize:"x-large"}}>Loading...</p>
